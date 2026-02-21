@@ -5,7 +5,7 @@ Write-Host "Press Ctrl+C to stop at any time" -ForegroundColor Yellow
 Write-Host ""
 for ($i = 1; $i -le $count; $i++) {
     Write-Host "Opening link $i of $count..." -ForegroundColor Cyan
-    Start-Process "cmd.exe" -ArgumentList "/c start `"$url`""
+    Start-Process $url.Trim()
     Start-Sleep -Seconds 1
 }
 Write-Host ""
